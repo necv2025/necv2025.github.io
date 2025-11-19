@@ -85,7 +85,7 @@
             text-align: center;
             font-size: 15px;
         }
-        table.table1 tr {
+        table.table1 > tbody > tr {
           border-top: 1pt solid black;
           border-bottom: 1pt solid black;
         }
@@ -131,6 +131,40 @@
         .underline {
             text-decoration: underline;
         }
+
+        table.table1 > tbody > tr.no_border { border-top: none; border-bottom: none; }
+
+        .table2_container {
+            background-color: #FEF9E7;
+        }
+
+        .table2 {
+            border-collapse: collapse;
+        }
+
+        .table2, .table2 *{
+            border: none;
+        }
+
+        .table2 .sub_first_col {
+            padding-left: 15px;
+            text-align: right;
+        }
+
+        .title {
+        }
+        .author {
+            font-size: 0.8em;
+            font-style: italic;
+        }
+        .university {
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
+        .sponsor_logo {
+            margin: 5px;
+        }
         
         @media only screen and (min-width: 768px) { 
             body {
@@ -163,16 +197,23 @@
           		height: 160px;
           		font-size: 22px;
           	}
-            table.table1 tr {
+            table.table1 > tbody > tr {
               border-top: 1pt solid black;
               border-bottom: 1pt solid black;
             }
 
             .google-maps iframe {
                 height: 400px;
-            }
-            
+            }    
         }
+
+        @media only screen and (max-width: 768px) { 
+            .sponsor_logo {
+                    width: 90%;
+                    margin: 20px;
+                }
+        }
+
     </style>
 
     <title>NECV 2025</title>
@@ -258,21 +299,153 @@
                 <td><b>Topic</b></td>
             </tr>
             <tr>
-                <td class="first_col">9:00-10:00</td>
+                <td class="first_col">9:00-9:50</td>
                 <td>Registration, Poster Setup & Breakfast</td>
             </tr>
             <tr>
-                <td class="first_col">10:00-10:15</td>
+                <td class="first_col">9:50-10:00</td>
                 <td>Opening Remarks</td>
             </tr>
             <tr>
-                <td class="first_col">10:15-11:30</td>
+                <td class="first_col">10:00-11:30</td>
                 <td><b>Oral Session I</b></td>
+            </tr>
+            <tr>
+                <td class="table2_container" colspan="2">
+                    <table class="table2">
+                        <tr>
+                            <td class="sub_first_col">[10:00]</td>
+                            <td><span class="title">Not All Birds Look The Same: Identity-Preserving Generation For Birds</span>, <span class="author">Aaron Sun</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[10:15]</td>
+                            <td><span class="title">Generative Action Tell-Tales: Assessing Human Motion in Synthesized Videos</span>, <span class="author">Xavier Thomas</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[10:30]</td>
+                            <td><span class="title">CObL: Toward Zero-Shot Ordinal Layering without User Prompting</span>, <span class="author">Aneel Damaraju</span>, <span class="university">Harvard University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[10:45]</td>
+                            <td><span class="title">Consensus-Driven Active Model Selection</span>, <span class="author">Justin Kay</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[11:00]</td>
+                            <td><span class="title">Struct2D: A Perception-Guided Framework for Spatial Reasoning in MLLMs</span>, <span class="author">Hanhui Wang</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[11:15]</td>
+                            <td><span class="title">Structured Light with a Million Light Planes per Second</span>, <span class="author">Dhawal Sirikonda</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
             <tr>
                 <td class="first_col">11:30-12:30</td>
                 <td><b>Coffee & Poster Session I</b></td>
             </tr>
+            <tr>
+                <td class="table2_container" colspan="2">
+                    <table class="table2">
+                        <tr>
+                            <td class="sub_first_col">[1]</td><td><span class="title">Tell the Story, Not the Frames: Narrative-Aware Retrieval for Audio Description</span>, <span class="author">Seung Hyun Hahm</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[2]</td><td><span class="title">Relational Representation Learning</span>, <span class="author">Ian Hajra</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[3]</td><td><span class="title">Progressive Stereo Edge Correspondences and Refinement</span>, <span class="author">Chiang-Heng Chien</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[4]</td><td><span class="title">Learning and Stabilizing Isometries for Robust Vision</span>, <span class="author">Javid Lakha</span>, <span class="university">Harvard University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[5]</td><td><span class="title">stable-worldmodel: An Ecosystem For World Model Research</span>, <span class="author">Lucas Maes</span>, <span class="university">Mila</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[6]</td><td><span class="title">Augmented Reality Active Area Labels for Dynamic Scenes</span>, <span class="author">Lana Yang-Maccini</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[7]</td><td><span class="title">Exploring Texture Guidance in Diffusion Models</span>, <span class="author">Eric Yee</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[8]</td><td><span class="title">PackUV: Packed Gaussian UV Maps for 4D Volumetric Video</span>, <span class="author">Aashish Rai</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[9]</td><td><span class="title">Compositional Targeted Multi-Label Universal Perturbations</span>, <span class="author">Hassan Mahmood</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[10]</td><td><span class="title">Blind to Shape, Bound to Semantics: A VLM’s Dilemma</span>, <span class="author">Zachary Meurer</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[11]</td><td><span class="title">Curvature Tuning: Provable Training-free Model Steering From a Single Parameter</span>, <span class="author">Leyang Hu</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[12]</td><td><span class="title">FLIGHT: Fibonacci Lattice-based Inference for Geometric Heading in real-Time</span>, <span class="author">Dave Dirnfeld</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[13]</td><td><span class="title">ID-Sim: An Identity-Focused Perceptual Similarity Metric</span>, <span class="author">Nayoung Chae</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[14]</td><td><span class="title">Enhancing Autonomous Navigation by Imaging Hidden Objects using Single-Photon LiDAR</span>, <span class="author">Nevindu Batagoda</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[15]</td><td><span class="title">Audio Geolocation: An Investigation with Natural Sounds</span>, <span class="author">Wuao Liu</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[16]</td><td><span class="title">Some Modalities are More Equal Than Others: Decoding and Architecting Multimodal Integration in MLLMs</span>, <span class="author">Tianle Chen</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[17]</td><td><span class="title">Do VLMs see texture like humans and CNNs? Evidence from slant-from-texture</span>, <span class="author">Qian Zhang</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[18]</td><td><span class="title">A Monte Carlo Rendering Framework for Simulating Optical Heterodyne Detection</span>, <span class="author">Juhyeon Kim</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[19]</td><td><span class="title">LVT: Large-Scale Scene Reconstruction via Local View Transformers</span>, <span class="author">Tooba Imtiaz</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[20]</td><td><span class="title">HouseCrafter: Lifting Floorplans to 3D Scenes with 2D Diffusion Models</span>, <span class="author">Yiwen Chen</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[21]</td><td><span class="title">Iris: Integrating Language into Diffusion-based Monocular Depth Estimation</span>, <span class="author">Ziyao Zeng</span>, <span class="university">Yale University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[22]</td><td><span class="title">Coffee: Controllable Diffusion Fine-tuning</span>, <span class="author">Ziyao Zeng</span>, <span class="university">Yale University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[23]</td><td><span class="title">BabyVLM-V2: Toward Developmentally Grounded Pretraining and Benchmarking of Vision Foundation Models</span>, <span class="author">Shengao Wang</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[24]</td><td><span class="title">DevCV Toolbox: Toward Developmentally Grounded Benchmarking of Vision Foundation Models</span>, <span class="author">Max Whitton</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[25]</td><td><span class="title">PRISM: Controllable Diffusion for Compound Image Restoration with Scientific Fidelity</span>, <span class="author">Rupa Kurinchi-Vendhan</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[26]</td><td><span class="title">Words That Make Language Models Perceive</span>, <span class="author">Sophie Wang</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[27]</td><td><span class="title">Active Measurement: Efficient Estimation at Scale</span>, <span class="author">Max Hamilton</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[28]</td><td><span class="title">Spatially-Varying Autofocus</span>, <span class="author">Yingsi Qin</span>, <span class="university">Carnegie Mellon University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[29]</td><td><span class="title">VisReason: A Large-Scale Dataset for Visual Chain-of-Thought Reasoning</span>, <span class="author">Lingxiao Li</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[30]</td><td><span class="title">Residual Primitive Fitting of 3D Shapes with SuperFrusta</span>, <span class="author">Aditya Ganeshan</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[31]</td><td><span class="title">CHAIR : An interpretable pipeline for AI-expert collaboration on elephant Re-identification</span>, <span class="author">Antoine Salaun</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[32]</td><td><span class="title">The LLM Bottleneck: Why Open-Source Vision LLMs Struggle with Hierarchical Visual Recognition</span>, <span class="author">Yuwen Tan</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                    </table>
+                </td>
+            <tr>
             <tr>
                 <td class="first_col">12:30-2:00</td>
                 <td>Lunch</td>
@@ -282,13 +455,143 @@
                 <td><b>Coffee & Poster Session II</b></td>
             </tr>
             <tr>
+                <td class="table2_container" colspan="2">
+                    <table class="table2">
+                        <tr>
+                            <td class="sub_first_col">[1]</td><td><span class="title">Generative Action Tell-Tales: Assessing Human Motion in Synthesized Videos</span>, <span class="author">Xavier Thomas</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[2]</td><td><span class="title">Looking at the Sky</span>, <span class="author">Shrenik Borad</span>, <span class="university">George Washington University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[3]</td><td><span class="title">Not All Birds Look The Same: Identity-Preserving Generation For Birds</span>, <span class="author">Aaron Sun</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[4]</td><td><span class="title">Super-Resolution with Structured Motion</span>, <span class="author">Gabby Litterio</span>, <span class="university">Brown University </span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[5]</td><td><span class="title">PLLM: Pseudo-Labeling Large Language Models for CAD Program Synthesis</span>, <span class="author">Yuanbo Li</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[6]</td><td><span class="title">Unsafe2Safe: Controllable Image Anonymization for Downstream Utility</span>, <span class="author">Minh Dinh</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[7]</td><td><span class="title">Exploring Efficient and Practical Unified Unified Multimodal Model</span>, <span class="author">Xu Ma</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[8]</td><td><span class="title">Scale-DiT: Ultra-High-Resolution Image Generation with Hierarchical Local Attention</span>, <span class="author">Yuyao Zhang</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[9]</td><td><span class="title">LayerCraft-Enhancing Text-to-Image Generation with CoT Reasoning and Layered Object Integration</span>, <span class="author">Yuyao Zhang</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[10]</td><td><span class="title">Outlier-Aware Post-Training Quantization for Image Super-Resolution</span>, <span class="author">Hailing Wang</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[11]</td><td><span class="title">Does learning about time improve out-of-distribution generalization in object detection?</span>, <span class="author">Kai Van Brunt</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[12]</td><td><span class="title">Vision Masked Image Modeling Transfers Across Domains</span>, <span class="author">Pranav Sankar</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[13]</td><td><span class="title">Can LVLMs Harness Visual Contexts to Untangle Ambiguity In Language?</span>, <span class="author">Heejeong Nam</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[14]</td><td><span class="title">SNAP: Towards Segmenting Anything in Any Point Cloud</span>, <span class="author">Aniket Gupta</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[15]</td><td><span class="title">Trace Anything: Representing Any Video in 4D via Trajectory Fields</span>, <span class="author">Xinhang Liu</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[16]</td><td><span class="title">LASER: Layer-wise Scale Alignment for Training-Free Streaming 4D Reconstruction</span>, <span class="author">Tianye Ding</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[17]</td><td><span class="title">RealBirdID: Benchmarking Bird Species Identification in the Era of MLLMs</span>, <span class="author">Logan Lawrence</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[18]</td><td><span class="title">Combining Translation with Magnification to Resolve Ambiguity in Super-Resolution</span>, <span class="author">Daniel Fu</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[19]</td><td><span class="title">DIET-CP: Lightweight and Data Efficient Self Supervised Continued Pretraining</span>, <span class="author">Jakob Ambsdorf</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[20]</td><td><span class="title">Potion Brewing Laboratory: An Environment for Continual Learning in World Models</span>, <span class="author">Taj Gillin</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[21]</td><td><span class="title">CObL: Toward Zero-Shot Ordinal Layering without User Prompting</span>, <span class="author">Aneel Damaraju</span>, <span class="university">Harvard University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[22]</td><td><span class="title">Consensus-Driven Active Model Selection</span>, <span class="author">Justin Kay</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[23]</td><td><span class="title">Struct2D: A Perception-Guided Framework for Spatial Reasoning in MLLMs</span>, <span class="author">Hanhui Wang</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[24]</td><td><span class="title">Attribution Robustness via Implicit Curvature Regularization</span>, <span class="author">Matteo Gamba</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[25]</td><td><span class="title">Discontinuous 2D Neural Fields without Meshing</span>, <span class="author">Javid Lakha</span>, <span class="university">Harvard University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[26]</td><td><span class="title">S3: Learnable Spline-Wavelets for State Space Models</span>, <span class="author">Daniel Cai</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[27]</td><td><span class="title">SimpleCall: A Lightweight Image Restoration Agent in Label-Free Environments with MLLM Perceptual Feedback</span>, <span class="author">Jianglin Lu</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[28]</td><td><span class="title">SuperRivolution: Fine-Scale Rivers from Coarse Temporal Satellite Imagery</span>, <span class="author">Rangel Daroya</span>, <span class="university">UMass Amherst</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[29]</td><td><span class="title">Underwater Optical Backscatter Communication using Acousto-Optic Beam Steering</span>, <span class="author">Dhawal Sirikonda</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[30]</td><td><span class="title">Structured Light with a Million Light Planes per Second</span>, <span class="author">Dhawal Sirikonda</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[31]</td><td><span class="title">Arbitrary-Scale 3D Gaussian Super-Resolution</span>, <span class="author">Huimin Zeng</span>, <span class="university">Northeastern University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[32]</td><td><span class="title">3D Curvix: From Multiview 2D Edges to 3D Curve Segments</span>, <span class="author">Chiang-Heng Chien</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                     </table>
+                </td>
+            </tr>
+            <tr>
                 <td class="first_col">3:00-4:30</td>
                 <td><b>Oral Session II</b></td>
             </tr>
             <tr>
+                <td class="table2_container" colspan="2">
+                    <table class="table2">
+                        <tr>
+                            <td class="sub_first_col">[3:00]</td>
+                            <td><span class="title">Tell the Story, Not the Frames: Narrative-Aware Retrieval for Audio Description</span>, <span class="author">Seung Hyun Hahm</span>, <span class="university">Dartmouth College</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[3:15]</td>
+                            <td><span class="title">Curvature Tuning: Provable Training-free Model Steering From a Single Parameter</span>, <span class="author">Leyang Hu</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[3:30]</td>
+                            <td><span class="title">Iris: Integrating Language into Diffusion-based Monocular Depth Estimation</span>, <span class="author">Ziyao Zeng</span>, <span class="university">Yale University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[3:45]</td>
+                            <td><span class="title">BabyVLM-V2: Toward Developmentally Grounded Pretraining and Benchmarking of Vision Foundation Models</span>, <span class="author">Shengao Wang</span>, <span class="university">Boston University</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[4:00]</td>
+                            <td><span class="title">Words That Make Language Models Perceive</span>, <span class="author">Sophie Wang</span>, <span class="university">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_first_col">[4:15]</td>
+                            <td><span class="title">Residual Primitive Fitting of 3D Shapes with SuperFrusta</span>, <span class="author">Aditya Ganeshan</span>, <span class="university">Brown University</span></td>
+                        </tr>
+                    </table>
+                </td>
+            <tr>
                 <td class="first_col">4:30-4:45</td>
                 <td>Closing Remarks</td>
-                <td></td>
             </tr>
             </tbody>
         </table>
@@ -298,15 +601,23 @@
         <p>The workshop will be held in the <a href="https://maps.app.goo.gl/Cp79u6RjNjwKoJNR9" target="_blank">Marriott Room, 11th Floor, Campus Center, University of Massachusetts, Amherst</a>.</p>
         
         <h3>Parking</h3>
-        <p>We recommend parking at the <a href="https://maps.app.goo.gl/9jDSFfiocpFsmNCq7" target="_blank">Campus Center Parking Garage</a>. Information on payment options can be found at this <a href="https://www.umass.edu/transportation/parking-center-garage">link</a>. Parking passes will be provided for early-bird registrations.</p>
-
+        <p>If you signed up by the early registration deadline we will pay for your parking. Please follow these instructions:
+            <ul>
+                <li>Park at the <a href="https://maps.app.goo.gl/9jDSFfiocpFsmNCq7" target="_blank">Campus Center Parking Garage</a> at Levels 2-6.</li>
+                <li><u>Do not</u> pay for parking.</li>
+                <li>Proceed to the registration desk at the Marriott Room, 11th Floor, Campus Center.</li>
+                <li>You will receive a link at the registration desk that you can use within 20 minutes of your arrival to register your car for parking.</li>
+            </ul>
+        If you did not sign up by the early registration deadline, the <a href="https://maps.app.goo.gl/9jDSFfiocpFsmNCq7" target="_blank">Campus Center Parking Garage</a> is still the most convenient parking location and you can use the parking kiosks to pay for parking. The rate is $1.85/hr.
+        </p>
     </div>
     
     <div class="container w-75">
         <hr>
         <h2>Sponsorship</h2>
             <p>
-                <a href="https://www.merl.com"><img src="files/merl.svg" alt="Mitsubishi Electric Research Laboratories" width="500" /></a>
+                <a href="https://www.merl.com"><img class="sponsor_logo" src="files/merl.svg" alt="Mitsubishi Electric Research Laboratories" width="400"/></a>
+                <a href="https://ds.cs.umass.edu"><img class="sponsor_logo" src="files/cds.png" alt="Center for Data Science and Artificial Intelligence" width="700"/></a>
             </p>
     </div>
 
@@ -320,15 +631,20 @@
 
             <p>
                 <b>Program committee</b>:
-                <a href="https://rangeldaroya.github.io">Rangel Daroya</a>, 
                 <a href="https://deepc94.github.io">Deep Chakraborty</a>, 
-                <a href="https://people.cs.umass.edu/~ashishsingh/">Ashish Singh</a>, 
-                <a href="https://wuao652.github.io">Wuao Liu</a>, 
-                <a href="https://www.loganlawrence.info">Logan Lawrence</a>, 
-                <a href="https://vikastmz.github.io">Vikas Thamizharasan</a>,  
                 <a href="https://mustafa1728.github.io">Mustafa Chasmai</a>,
-                <a href="https://johnmaxh.github.io">Max Hamilton</a>, and
-                <a href="https://aaronsun1030.github.io">Aaron Sun</a>.
+                <a href="https://rangeldaroya.github.io">Rangel Daroya</a>, 
+                <a href="https://johnmaxh.github.io">Max Hamilton</a>,
+                <a href="https://www.loganlawrence.info">Logan Lawrence</a>, 
+                <a href="https://wuao652.github.io">Wuao Liu</a>, 
+                <a href="https://aaronsun1030.github.io">Aaron Sun</a>, and
+                <a href="https://vikastmz.github.io">Vikas Thamizharasan</a>.
+            </p>
+
+            <p>
+                <b>Logistics committee</b>:
+                <a href="https://rangeldaroya.github.io">Rangel Daroya</a> and 
+                <a href="https://www.loganlawrence.info">Logan Lawrence</a>.
             </p>
             
             <p>
